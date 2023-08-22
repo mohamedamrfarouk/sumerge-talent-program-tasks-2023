@@ -15,7 +15,7 @@ function upload() {
 
 //Method to read csv file and convert it into JSON 
 function csvFileToJSON(file){
-    debugger;
+    // debugger;
     console.log(file)
     try {
         var reader = new FileReader();
@@ -100,6 +100,7 @@ async function btn_func(){
         }
     });
         console.log("before")
-        console.log(await mypromise)
+        let value = await mypromise
+        displayJsonToHtmlTable(value)
         console.log('after')
 }
