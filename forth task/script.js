@@ -87,20 +87,25 @@ function displayJsonToHtmlTable(jsonData){
 const btn = document.querySelector("#btn")
 
 
+function btn_func(){
+    myfile = upload()
+    jsonData = csvFileToJSON(myfile)
+    displayJsonToHtmlTable(jsonData)
 
-async function btn_func(){
-    const mypromise = new Promise(async (resolve, reject)=>{
-        myfile = upload()
-        jsonData = csvFileToJSON(myfile)
-    
-        if(jsonData){
-            resolve(jsonData)
-        }else{
-            reject(Error("file not valid"))
-        }
-    });
-        console.log("before")
-        let value = await mypromise
-        displayJsonToHtmlTable(value)
-        console.log('after')
 }
+// async function btn_func(){
+//     const mypromise = new Promise(async (resolve, reject)=>{
+//         myfile = upload()
+//         jsonData = csvFileToJSON(myfile)
+    
+//         if(jsonData){
+//             resolve(jsonData)
+//         }else{
+//             reject(Error("file not valid"))
+//         }
+//     });
+//         console.log("before")
+//         let value = await mypromise
+//         displayJsonToHtmlTable(value)
+//         console.log('after')
+// }
