@@ -1,0 +1,32 @@
+:root{
+  --main_color: #466995;
+  --sec_color: #333;
+  --fruit1_left: 20%
+  --fruit1_top: 20%
+}
+
+body {
+    background-color: #4e1919bd;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.vl {
+  border-left: 6px solid black;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+}
+
+.fruit{
+  position: absolute;
+}
+.fruit1{
+  left: 20%;
+  top: 50%;
+}
+
+.fruit img{
+  max-width: 100px;
+}
