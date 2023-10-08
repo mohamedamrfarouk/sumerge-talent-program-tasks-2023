@@ -18,6 +18,8 @@ public class TopicService {
     @Qualifier(value = "aliceTopicComponent")
     public StaticTopicComponent staticTopicComponent;
 
+
+
     List<Topic> topics = new ArrayList<>( Arrays.asList(
          new Topic("spring", "Spring Framework", "Spring Description")
          ,new Topic("java", "core java", "core java description")

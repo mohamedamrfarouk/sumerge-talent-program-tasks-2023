@@ -9,6 +9,14 @@ import java.util.List;
 
 @Qualifier("bobTopicComponent")
 public class BobTopicComponent implements StaticTopicComponent {
+    public List<Topic> getBobList() {
+        return bobList;
+    }
+
+    public void setBobList(List<Topic> bobList) {
+        this.bobList = bobList;
+    }
+
     List<Topic> bobList = new ArrayList<>( Arrays.asList(
             new Topic("bob spring", "bob Spring Framework", "bob Spring Description")
             ,new Topic("bob java", "bob core java", "bob core java description")

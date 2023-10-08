@@ -1,6 +1,10 @@
 package task3.apppart.topic.controllers;
 
 import task3.apppart.exceptions.TopicsEmptyException;
+import task3.apppart.topic.TopicMapper;
+import task3.configpart.topic.components.AliceTopicComponent;
+import task3.configpart.topic.components.BobTopicComponent;
+import task3.configpart.topic.components.StaticTopicComponent;
 import task3.configpart.topic.models.Topic;
 import task3.apppart.topic.services.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,13 +29,16 @@ public class TopicController {
 
     @RequestMapping("/alicetopics")
     public List<Topic> getaliceTopics() throws TopicsEmptyException {
-        List<Topic> anything = new ArrayList<>();
-        topicService.staticTopicComponent.setTopics(anything);
 
-        if (topicService.staticTopicComponent.getTopics().size()==0)
+        AliceTopicComponent aliceTopics = TopicMapper.INSTANCE.mapBobTopicsToAliceTopics(new BobTopicComponent());
+
+//        List<Topic> anything = new ArrayList<>();
+//        topicService.staticTopicComponent.setTopics(anything);
+
+        if (aliceTopics.getTopics().size()==0)
             throw new TopicsEmptyException();
 
-        return topicService.staticTopicComponent.getTopics();
+        return aliceTopics.getTopics();
     }
 
 
