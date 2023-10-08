@@ -1,9 +1,10 @@
-package io.javabrains.springbootstarter.topic.config2;
+package task3.apppart.topic.config2;
 
-import io.javabrains.springbootstarter.topic.components.AliceTopicComponent;
-import io.javabrains.springbootstarter.topic.components.BobTopicComponent;
-import io.javabrains.springbootstarter.topic.config.TopicServiceConfiguration;
-import io.javabrains.springbootstarter.topic.services.TopicService;
+import task3.configpart.topic.config.TopicServiceConfiguration;
+import task3.configpart.topic.components.AliceTopicComponent;
+import task3.configpart.topic.components.BobTopicComponent;
+import task3.apppart.topic.config2.TopicServiceConfiguration2;
+import task3.apppart.topic.services.TopicService;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
